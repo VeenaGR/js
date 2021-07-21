@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<title>Calculator</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="jslab1.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body class="col-md-12 page_color">
+	<div class="container" style="margin-top: 4em;">
+		<div class="row">
+			<div class="col-md-5 offset-md-3">
+				<div class="card outline rounded" style="width:400px; height:370px">
+					<div class="card-header text-center outline">
+					CALCULATOR
+					</div>
+					<div class="card-body">
+						<form>
+							<div class="form-group">
+							<label id="num1_label">First Number</label>
+							<input type="text" id="num1_data" name="first" class="rounded input_box1" required=""><br>
+							</div>
+							<div class="form-group">
+							<label id="num2_label">Second Number</label>
+							<input type="text" id="num2_data" name="second" class="rounded" required="">
+							</div>
+						</form>
+						<div class="form-group">
+							<label id="op-label">Operations</label>
+							<div class ="dropdown dropdown_pos">
+							    <select name="operations" id="operations" required="" class="rounded">
+								    <option value="1">Addition</option>
+								    <option value="2" >Substraction</option>
+								    <option value="3">Multiplication</option>
+								    <option value="4">Division</option>
+							    </select>
+							</div>
+							</div>
+							<br>
+							<br>
+							<div id="ans">
+								<button type="button" class="btn btn-info btn-md "id="res" onclick="first()">RESULT</button>
+								<input type="text" id="result_data" name="second" class="rounded result_box" readonly="">
+							</div>
+
+
+						
+					</div>
+					
+				</div>
+            </div>
+	</div>
+	</div>
+	<p id="demo"></p>
+	<script type="text/javascript">
+	let R,x,y,V;
+	function first(){
+      x=document.getElementById("num1_data").value;
+	  y=document.getElementById("num2_data").value;
+      V=document.getElementById("operations").value;
+      switch(V)
+		{
+			case '1':
+			R=Number(x)+Number(y);
+			break;
+			case '2':
+			R=x-y;
+			break;
+			case '3':
+			R=x*y;
+			break;
+			case '4':
+			R=x/y;
+			break;
+			
+		}
+		document.getElementById("result_data").value=R;
+	}
+   </script>
+</body>
+</html>

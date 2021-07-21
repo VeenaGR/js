@@ -1,0 +1,32 @@
+.page_color
+{
+	background-color:white;
+}
+.outline
+{
+
+background-color: #F0F0F0;;
+}
+.input_box1
+{
+	margin-left:1.4em;
+}
+.dropdown_pos
+{
+	margin-left: 8em;
+	margin-top: -1.5em;
+}
+.result_box
+{
+	margin-left:3.6em;
+	margin-top: -1em;
+}
+.result_input
+{
+	margin-left:0.67em;
+	margin-bottom:4em;
+}
+.oper_box
+{
+	margin-bottom:-1.4em;
+}
